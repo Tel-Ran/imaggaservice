@@ -20,7 +20,8 @@ public class ImaggaRun implements IimaggaRun {
 		headers.add("Authorization",
 				token);
 		String url=endPoint.contains("colors")?
-				"https://api.imagga.com/v1/colors?url=":"https://api.imagga.com/v1/tagging?url=";
+				"https://api.imagga.com/v2/colors?image_url=" :
+						"https://api.imagga.com/v2/tags?image_url=";
 		
 		HttpEntity<String> requestEntity=new HttpEntity<>(headers);
 		ResponseEntity<String> response=
